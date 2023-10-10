@@ -15,6 +15,10 @@ header {
   grid-template-columns: 1fr 3fr 1fr;
 }
 
+h1 {
+  margin-bottom: 20px;
+}
+
 nav > ul {
   display: grid;
   gap: 10px;
@@ -100,8 +104,55 @@ nav > ul > li > a {
     padding: 40px;
     grid-auto-flow: dense;
 }
+
+.creditos {
+  text-align: right;
+  font-size: 0.8rem;
+  padding: 0px 40px 20px 40px;
+}
+
+.big-banner {
+  width: 100%;
+  margin-top: 40px;
+}
+
+@media (max-width: 1000px) {
+  header {
+    grid-template-columns: 2fr 3fr;
+    align-items: center;
+  }
+
+  header > .logo {
+    width: 100%;
+  }
+
+  header > nav {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  nav > ul {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 20px 0px 0px 0px;
+  }
   
-@media (min-width: 600px) {
+}
+
+@media (max-width: 640px) {
+  header {
+    display: block;
+  }
+
+  header > .logo {
+    width: 100%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+}
+
+@media (min-width: 640px) {
     .wide {
       grid-column: span 2;
     }
@@ -109,4 +160,26 @@ nav > ul > li > a {
     .tall {
       grid-row: span 2;
     }
-}  
+}
+
+@media (max-width: 540px) { 
+  nav > ul {
+    display: block;
+  }
+
+  nav > ul > li {
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .intro {
+    padding: 40px 0 0 0;
+  }
+}
+
+@media (max-width: 340px) { 
+  .grid-images-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+}
