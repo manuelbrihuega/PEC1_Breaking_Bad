@@ -1,3 +1,4 @@
+@import 'npm:@splidejs/splide/dist/css/splide-core.min.css';
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Roboto:wght@100&display=swap');
 
 * {
@@ -19,6 +20,11 @@ h1 {
   margin-bottom: 20px;
 }
 
+h2, h3 {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
 nav > ul {
   display: grid;
   gap: 10px;
@@ -29,7 +35,6 @@ nav > ul > li {
   background-color: #016936;
   border-radius: 30px;
   width: 100%;
-  padding: 13px;
   font-size: 1rem;
   font-weight: lighter;
   list-style: none;
@@ -46,6 +51,9 @@ nav > ul >li:hover {
 nav > ul > li > a {
   text-decoration: none;
   color: white;
+  display: block;
+  width: 100%;
+  padding: 13px;
 }
 
 .intro {
@@ -53,8 +61,61 @@ nav > ul > li > a {
   text-align: center;
 }
 
-.intro > #contenido {
+.intro > .contenido {
   font-size: 1.1rem;
+}
+
+.presentacion > .contenido, .detalle > .contenido {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.presentacion > .contenido > .texto.ancho {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.detalle > .contenido a {
+  color: #016936;
+}
+
+.detalle > .contenido > .texto {
+  display: grid;
+  gap: 20px;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.detalle > .contenido > .texto > h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.presentacion > .contenido > .imagen > img, .detalle > .contenido > .imagen > figure > img {
+  width: 100%;
+}
+
+.presentacion > .contenido > .texto.ancho > p, .detalle > .contenido > .texto.ancho > p {
+  margin-bottom: 20px;
+}
+
+.presentacion > .contenido > .texto.ancho > figure {
+  text-align: center;
+  font-size: 0.8rem;
+  padding: 20px 40px 40px 40px;
+}
+
+.presentacion > .contenido > .texto.ancho > figure > figcaption, .detalle > .contenido > .imagen > figure > figcaption  {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.presentacion > .contenido > .texto.ancho > figure > img, .presentacion > .contenido > .texto.ancho > figure > iframe {
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9;
 }
 
 #frase-celebre {
@@ -94,6 +155,30 @@ nav > ul > li > a {
 .grid-item:hover {
     filter: opacity(0.9);
     transform: scale(1.04);
+}
+
+.grid-item > .personaje {
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.grid-item > .personaje:hover {
+  opacity: 0.7;
+}
+
+.grid-item > .personaje > a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
 }
   
 .grid-images-container {
@@ -135,6 +220,29 @@ nav > ul > li > a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 20px 0px 0px 0px;
   }
+
+  .presentacion > .contenido, .detalle > .contenido {
+    display: block;
+  }
+
+  .presentacion > .contenido > .imagen {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detalle > .contenido > .imagen {
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .detalle > .contenido > .texto > h2 {
+    margin-top: 20px;
+  }
   
 }
 
@@ -149,6 +257,11 @@ nav > ul > li > a {
     margin-left: auto;
     margin-right: auto;
     display: flex;
+  }
+
+  .presentacion > .contenido > .texto.ancho > figure {
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
