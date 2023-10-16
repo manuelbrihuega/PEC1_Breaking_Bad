@@ -13,7 +13,13 @@ body {
 header {
   padding: 40px 40px 0px 40px;
   display: grid;
-  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-columns: 1fr 3fr 0.8fr;
+  align-items: center;
+  gap: 40px;
+}
+
+header > .logo {
+  width: 100%;
 }
 
 h1 {
@@ -28,6 +34,8 @@ h2, h3 {
 nav > ul {
   display: grid;
   gap: 10px;
+  padding: 0px;
+  width: 100%;
 }
 
 nav > ul > li {
@@ -57,7 +65,7 @@ nav > ul > li > a {
 }
 
 .intro {
-  padding: 40px 40px 0px 40px;
+  padding: 40px 0px 0px 0px;
   text-align: center;
 }
 
@@ -65,7 +73,7 @@ nav > ul > li > a {
   font-size: 1.1rem;
 }
 
-.presentacion > .contenido, .detalle > .contenido {
+.presentacion > .contenido, .detalle > .contenido, .enlaces > .contenido {
   padding: 40px;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,7 +85,7 @@ nav > ul > li > a {
   grid-column-end: 3;
 }
 
-.detalle > .contenido a {
+.detalle > .contenido a, .enlaces > .contenido a, .creditos a {
   color: #016936;
 }
 
@@ -93,7 +101,7 @@ nav > ul > li > a {
   margin-bottom: 0;
 }
 
-.presentacion > .contenido > .imagen > img, .detalle > .contenido > .imagen > figure > img {
+.presentacion > .contenido > .imagen > img, .detalle > .contenido > .imagen > figure > img, .enlaces > .contenido > .imagen > img {
   width: 100%;
 }
 
@@ -201,14 +209,36 @@ nav > ul > li > a {
   margin-top: 40px;
 }
 
+.lista-fuentes {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.fuente, .licencia {
+  background-color: rgb(244, 246, 247);
+  padding: 2rem;
+}
+
+.fuente dt, .licencia dt {
+  font-weight: bold;
+  font-size: 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.fuente dd, .licencia dd {
+  margin: 0;
+  line-height: 1.5rem;
+}
+
+
 @media (max-width: 1000px) {
   header {
     grid-template-columns: 2fr 3fr;
     align-items: center;
-  }
-
-  header > .logo {
-    width: 100%;
+    column-gap: 40px;
+    row-gap: 10px;
   }
 
   header > nav {
@@ -221,11 +251,11 @@ nav > ul > li > a {
     padding: 20px 0px 0px 0px;
   }
 
-  .presentacion > .contenido, .detalle > .contenido {
+  .presentacion > .contenido, .detalle > .contenido, .enlaces > .contenido {
     display: block;
   }
 
-  .presentacion > .contenido > .imagen {
+  .presentacion > .contenido > .imagen, .enlaces > .contenido > .imagen {
     margin-top: 40px;
     margin-bottom: 40px;
     max-width: 800px;
@@ -262,6 +292,10 @@ nav > ul > li > a {
   .presentacion > .contenido > .texto.ancho > figure {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .grid-images-container {
+    grid-auto-rows: minmax(300px, auto);
   }
 }
 
