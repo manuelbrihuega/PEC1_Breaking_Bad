@@ -126,6 +126,10 @@ nav > ul > li > a {
   aspect-ratio: 16 / 9;
 }
 
+iframe {
+  border: none;
+}
+
 #frase-celebre {
   font-weight: 700;
   font-size: 1.8rem;
