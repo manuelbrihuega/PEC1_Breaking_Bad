@@ -1,4 +1,3 @@
-
 import Splide from '@splidejs/splide';
 
 // Frases célebres
@@ -46,7 +45,7 @@ if (document.getElementsByClassName('personajes').length !== 0) {
 // Configuramos el slider de imagenes, que hemos instalado con el módulo splidejs y que se encuentra en la página de presentación
 if (document.getElementsByClassName('splide').length !== 0) {
     new Splide( '.splide', {
-        type   : 'slide',
+        type   : 'loop',
         arrows: false,
         drag: true,
         autoplay: true,

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Web sobre la serie Breaking Bad",
   "source": "src/index.html",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "browserslist": "> 0.5%, last 2 versions, not dead, ie 8",
   "scripts": {
     "parcel:dev": "parcel",
     "parcel:build": "parcel build",
@@ -26,6 +26,8 @@
     "npm-run-all": "^4.1.5",
     "parcel": "^2.9.3",
     "parcel-reporter-static-files-copy": "^1.5.3",
+    "postcss": "^8.4.31",
+    "postcss-import": "^15.1.0",
     "posthtml-include": "^1.7.4",
     "rimraf": "^5.0.5"
   },
