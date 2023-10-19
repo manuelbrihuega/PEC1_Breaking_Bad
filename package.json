@@ -2,7 +2,7 @@
   "name": "pec1_breaking_bad",
   "version": "1.0.0",
   "description": "Web sobre la serie Breaking Bad",
-  "source": "src/index.html",
+  "source": "src/pages/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead, ie 8",
   "scripts": {
     "parcel:dev": "parcel",

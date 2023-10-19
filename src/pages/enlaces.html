@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo sobre Breaking Bad</title>
-    <link rel="stylesheet" href="./estilos/styles.sass" />
-    <script type="module" src="app.js"></script>
+    <link rel="stylesheet" href="../styles/styles.sass" />
+    <script type="module" src="../scripts/app.js"></script>
 </head>
 <body>
     <header>
-        <img class="logo" src="../img/logo.svg" alt="Logo de la serie Breaking Bad">
+        <img class="logo" src="../../img/logo.svg" alt="Logo de la serie Breaking Bad">
         <div class="intro">
             <h1>Enlaces y licencia</h1>
             <p class="contenido">A continuación tienes una lista con las fuentes y enlaces utilizados, tanto para la elaboración de esta web como para la obtención de su contenido.</p>
         </div>
-        <include src="src/menu.html"></include>
+        <include src="./src/pages/components/menu.html"></include>
     </header>
     <main class="enlaces">
         <div class="contenido">
@@ -55,12 +55,12 @@
                 </div>
             </dl>
             <div class="imagen">
-                <img src="../img/vertical-jesse-walter.jpg" alt="Jesse Pinkman y Walter White en una de las escenas de la serie">
+                <img src="../../img/vertical-jesse-walter.jpg" alt="Jesse Pinkman y Walter White en una de las escenas de la serie">
             </div>
         </div>
     </main>
     <footer>
-        <include src="src/pie.html"></include>
+        <include src="./src/pages/components/pie.html"></include>
     </footer>
 </body>
 </html>
